@@ -6,15 +6,15 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(images/background.jpeg);
-    background-size: auto 100%;
+    background-size: cover; 
+    background-position: center;
 }
 
 .jersey-25-regular {
     font-family: "Jersey 25", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
+}
 
 a {
     color: #22cc99;
@@ -33,11 +33,12 @@ nav {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     justify-content: center;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 10px; /* Adjusted margin for smaller screens */
 }
 
 .nav-links li a {
@@ -59,22 +60,22 @@ nav {
     color: lime;
 }
 
-
-
 /* Hero Section */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 50px;
+    padding: 50px 10%; /* Added horizontal padding for smaller screens */
     text-align: center;
 }
 
 /* Cube Container and Cube */
 .cube-container {
-    width: 400px;  /* Adjusted to a mid-sized cube */
-    height: 400px;
+    width: 80vw;  /* Use relative units */
+    height: 80vw; /* Maintain square aspect ratio */
+    max-width: 400px; /* Prevent excessive growth */
+    max-height: 400px;
     perspective: 1000px;
 }
 
@@ -88,8 +89,8 @@ nav {
 
 .face {
     position: absolute;
-    width: 400px;  /* Ensure all faces are the same size */
-    height: 400px;
+    width: 100%; /* Use percentage for responsiveness */
+    height: 100%;
     background: #fff;
     border: 2px solid #ccc;
     display: flex;
@@ -98,7 +99,7 @@ nav {
 }
 
 img {
-    width: 100%;  /* Ensure all images fit within the cube face */
+    width: 100%; /* Ensure all images fit within the cube face */
     height: 100%;
     object-fit: cover;
 }
@@ -119,7 +120,7 @@ img {
 
 /* Intro Text */
 .intro-text {
-    max-width: 500px;
+    max-width: 90%; /* Responsive text container */
     text-align: center;
 }
 
@@ -136,7 +137,7 @@ img {
 /* Section Styles */
 .solutions {
     background-color: #111;
-    padding: 50px;
+    padding: 50px 10%; /* Added horizontal padding for smaller screens */
     text-align: center;
 }
 
@@ -160,4 +161,54 @@ button.remix-btn {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .intro-text h1 {
+        font-size: 40px; /* Smaller font size for mobile */
+    }
+
+    .intro-text p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+
+    .nav-links li {
+        margin: 0 5px; /* Adjust margin for smaller screens */
+    }
+
+    .solutions h2 {
+        font-size: 28px; /* Smaller header font size */
+    }
+
+    .solutions p {
+        font-size: 16px; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .cube-container {
+        width: 90vw; /* Even smaller width for very small screens */
+        height: 90vw; /* Maintain square aspect ratio */
+    }
+
+    .intro-text h1 {
+        font-size: 30px; /* Even smaller font size for very small screens */
+    }
+
+    .intro-text p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+
+    .solutions h2 {
+        font-size: 24px; /* Smaller header font size */
+    }
+
+    .solutions p {
+        font-size: 14px; /* Smaller paragraph font size */
+    }
+
+    button.remix-btn {
+        padding: 8px 15px; /* Smaller button padding */
+    }
 }
