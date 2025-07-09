@@ -51,12 +51,18 @@
         <p>Technologies I use include Java, JavaScript, HTML, CSS, Python, and MySQL.</p>
     </section>
 
-    <!-- Contact Section -->
-    <section class="solutions" id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to collaborate or inquire about my work, feel free to get in touch.</p>
-        <button class="remix-btn">Email Me</button>
-    </section>
+   <!-- Contact Section -->
+<section class="solutions" id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to collaborate or inquire about my work, feel free to get in touch.</p>
+    <button class="remix-btn" id="emailBtn">Email Me</button>
+</section>
+
+<script>
+  document.getElementById('emailBtn').addEventListener('click', function () {
+    window.location.href = 'mailto:kennesmith50@gmail.com';
+  });
+</script>
 
 </body>
 </html>
