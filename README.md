@@ -1,6 +1,4 @@
 # 💼 Portfolio
-
-Welcome to my personal developer portfolio!  
 This repository highlights my work, skills, and experience as a **Software Engineer** focused on building clean, scalable, and user-centered applications.
 
 ---
